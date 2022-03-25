@@ -33,4 +33,10 @@ public class Rover {
     public void setPosition(Position position) {
         this.position = position;
     }
+
+    @Override
+    public String toString() {
+        return "Rover " +
+                "position = [" + position.getX() + "," + position.getY() + "]";
+    }
 }

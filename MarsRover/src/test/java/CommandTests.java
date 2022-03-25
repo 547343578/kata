@@ -20,15 +20,15 @@ public class CommandTests {
     @Test
     public void commands_test(){
         Direction direction = new North();
-        Position position = new Position(1,1);
+        Position position = new Position(5,10);
         Rover rover = new Rover(direction, position, mars);
-        String commands = "frffbr";
+        String commands = "fffrffflbb";
 
         utils.analizeCommands(commands, rover);
 
-        assertEquals(rover.getDirection().getDirection(), "S");
-        assertEquals(rover.getPosition().getX(), 2);
-        assertEquals(rover.getPosition().getY(), 2);
+        assertEquals(rover.getDirection().getDirection(), "N");
+        assertEquals(rover.getPosition().getX(), 8);
+        assertEquals(rover.getPosition().getY(), 11);
     }
 
     @Test(expected = UnknownCommandException.class)

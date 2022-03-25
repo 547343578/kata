@@ -18,6 +18,10 @@ public class ActionActionUtils implements ActionUtilsApi {
         put("S", new South());
     }};
 
+    public Map<String, Direction> getDirectionMap() {
+        return directionMap;
+    }
+
     @Override
     public void moveForward(Rover rover){
         rover.getDirection().moveForward(rover);
