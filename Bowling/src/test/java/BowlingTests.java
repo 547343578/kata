@@ -1,4 +1,4 @@
-import com.lucas.Bowling.Game;
+import com.lucas.bowling.Game;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +24,18 @@ public class BowlingTests {
     }
 
     @Test
-    public void score_points_but_no_spare_no_strike(){
+    public void generic_score_points(){
+        bowlingGame.roll(5);
+        bowlingGame.roll(2);
+        bowlingGame.roll(3);
+        bowlingGame.roll(4);
+        Integer result = bowlingGame.score();
+
+        assertEquals(14,result);
+    }
+
+    @Test
+    public void score_points_no_spare_no_strike(){
         for(int roll = 0; roll < 20; roll++){
             bowlingGame.roll(2);
         }
