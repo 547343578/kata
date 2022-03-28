@@ -56,4 +56,14 @@ public class BowlingTests {
         assertEquals(50, result);
     }
 
+    @Test
+    public void score_points_with_all_strikes(){
+        for (int roll = 0; roll < 21; roll++){
+            bowlingGame.roll(10);
+        }
+        Integer result = bowlingGame.score();
+
+        assertEquals(300, result);
+    }
+
 }
