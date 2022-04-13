@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class ActionActionUtils implements ActionUtilsApi {
 
-    Map<String, Direction> directionMap = new HashMap<>(){{
+    private final Map<String, Direction> directionMap = new HashMap<>(){{
         put("W", new West());
         put("E", new East());
         put("N", new North());
